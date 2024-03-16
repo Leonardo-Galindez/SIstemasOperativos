@@ -15,4 +15,9 @@ main(){
         valor de a como un carácter. 
     */
     printf ("La letra %c \n", a);
+
+    char sensor;
+	float temp; 
+	printf('La temperatura de %c es %f',sensor, temp);
+
 }
