@@ -6,7 +6,7 @@ int main() {
 
     printf("Valor de variable_char antes del incremento: %d \n", variable_char);
     printf("Valor de variable_unsigned_char antes del incremento: %u \n", variable_unsigned_char);
-
+    
     variable_char++;
     variable_unsigned_char++;
 

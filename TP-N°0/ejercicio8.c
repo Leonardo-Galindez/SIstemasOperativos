@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>/*Agregan archivos cabecera */
 
 int main() {
     /*
