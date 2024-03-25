@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    int c;
+    char c;
     char palabra[] = "lenguaje";
     int intentos = 6;
     int letras_acertadas = 0;
@@ -14,6 +14,7 @@ int main() {
     printf("Adivina la palabra secreta. Ingresa una letra (0 para salir).\n");
 
     while (1) {
+
         printf("\nIntentos restantes: %d\n", intentos);
 		printf("\r c = %c  ingrese una letra (0 para salir): ", c);
         c = getchar();
@@ -29,6 +30,7 @@ int main() {
                     break;
                 }
             }
+            
             if (!acerto) {
                 intentos--;
                 if (intentos == 0) {
