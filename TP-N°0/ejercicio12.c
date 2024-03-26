@@ -55,7 +55,7 @@ int main() {
             break;
         }
 	}
-	system ("/bin/stty sane erase ^H");
+	system ("/bin/stty sane erase ^H");/*NO SE RECETEA*/
     printf("\nFin del juego\n");
     
 }
