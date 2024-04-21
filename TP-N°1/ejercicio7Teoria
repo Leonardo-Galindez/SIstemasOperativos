@@ -1,0 +1,4 @@
+¿Cuál es el último número primo calculado por el proceso hijo?.
+es el 4999
+¿Le fue posible calcular todos los que debía calcular?
+si utilizo un sleep voy a poder calcular todos los primos pero sino lo uso no va a poder ejecutar el proceso hijo 

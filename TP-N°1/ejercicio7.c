@@ -1,24 +1,46 @@
-/* Creación y finalización de proceso en XINU */
 #include <stdio.h>
-void imprimir(void);
-void main(void){
-    int pid , i;
-    
-    pid = create(imprimir, 2048, 20, "process 1", 0);
-    resume(pid);
-    for (i = 0 ; i<=1000 ; i++){
-        putc(CONSOLE,i);
+#include <unistd.h>
+#include <stdlib.h> // Para el uso de exit()
+#include <sys/types.h>
+#include <signal.h>
+
+int esPrimo(int num) {
+    int rta = 1;
+    int i = 2;
+
+    while (rta == 1 && i < num) {
+        if (num % i == 0) {
+            rta = 0;
+        }
+        i++;
     }
-    exit();
-    sleep(5);
-    kill(pid);
-    printf("Mate a mi propio hijo (suena horrible)\n");
+    return rta;
 }
-/* proceso sndA */
-void imprimir(void){
-    int i;
-    for (i = 1000 ; i<=5000 ; i++){
-        putc(CONSOLE,i);
+
+void imprimir(int inicio, int fin){
+    for (int i = inicio; i <= fin; i++) {
+        if (esPrimo(i) == 1) {
+            printf(" %d ", i);
+        }
     }
-    exit();
 }
+
+int main(void) {
+    int pid;
+    int x = 0;
+    pid = fork();
+    if (pid == 0) {
+        printf("INICIO HIJO \n");
+        imprimir(1000,5000);
+        printf("FIN HIJO \n");
+    } else {
+        printf("INICIO PADRE \n");
+        imprimir(0,1000);
+        sleep(1);//dormimos al padre para que puede ejecutarse el hijo
+        kill(pid, SIGKILL);
+        printf("FIN PADRE \n");
+        exit(0);
+    }
+    return 0;
+}
+
