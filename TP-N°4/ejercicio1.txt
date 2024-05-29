@@ -1,0 +1,27 @@
+a. ¿Qué significa el acrónimo gcc?. ¿Desde cuándo está el proyecto?. ¿Cuál es su objetivo?
+    El acrónimo GCC significa GNU Compiler Collection (Colección de Compiladores de GNU).
+
+    El proyecto GCC comenzó en 1987. Fue iniciado por Richard Stallman y fue parte del proyecto
+    GNU de la Free Software Foundation (FSF).
+
+    El objetivo de GCC es proporcionar una colección de compiladores para diversos
+    lenguajes de programación, incluyendo C, C++, Objective-C, Fortran, Ada, Go y más.
+    GCC está diseñado para ser libre y de código abierto, promoviendo la libertad de
+    los desarrolladores de software para estudiar, modificar y distribuir el software.
+    Es una herramienta fundamental en muchos sistemas operativos basados en Unix y Linux,
+    y se utiliza ampliamente en la compilación de software en una variedad de plataformas.
+
+b. ¿Qué es POSIX?
+
+    POSIX (Portable Operating System Interface) es un conjunto de estándares definidos por
+    el Instituto de Ingenieros Eléctricos y Electrónicos (IEEE) para mantener la compatibilidad
+    entre los sistemas operativos. El objetivo principal de POSIX es facilitar la portabilidad
+    de aplicaciones entre diferentes sistemas operativos al proporcionar una interfaz estándar
+    y coherente para servicios del sistema operativo, como la administración de archivos, 
+    procesos y comunicación entre procesos.
+
+
+d. ¿Considera que este programa podría ser portado fácilmente a MAC OS? ¿O a FreeBSD?. Si/no,
+porqué. Justifique su respuesta.
+
+si porque estos sistemas tienen el estadar posix
