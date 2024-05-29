@@ -45,6 +45,7 @@ int main(){
         perror("Error al leer el archivo y escribir en la memoria compartida");
         return -1;
     }
+   
     fclose(file);
     return 0;
 }
