@@ -24,6 +24,10 @@ b. ¿Qué es POSIX?
 d. ¿Considera que este programa podría ser portado fácilmente a MAC OS? ¿O a FreeBSD?. Si/no,
 porqué. Justifique su respuesta.
 
-si porque estos sistemas tienen el estadar posix
+si porque estos sistemas tienen el estadar posix 
 
-cada processo es un hilo
+
+4:
+Real: 0m1.234s - Este valor indica que el programa tardó 1.234 segundos en ejecutarse desde el principio hasta el final.
+User: 0m0.567s - Este valor muestra que el programa utilizó 0.567 segundos de tiempo de CPU en modo usuario (ejecutando código del programa).
+Sys: 0m0.123s - Este valor indica que el programa utilizó 0.123 segundos de tiempo de CPU en modo sistema (realizando operaciones del sistema operativo, como llamadas al sistema).

@@ -37,7 +37,7 @@ typedef struct
 unsigned char *imagen_original;              // guarda la direccion de memoria de la imagen
 unsigned char nueva_imagen[2000 * 2000 * 3]; // donde vamos a guarda la nueva imagen antes de pasarla al archivo nuevo
 int width, height, padding;
-BMPInfoHeader infoh;
+BMPInfoHeader infoh; // encabezado
 
 void convertir(int inicio, int fin)
 {
@@ -114,7 +114,7 @@ int main()
     //imagen_original[img_size];
     lseek(in_fd, h.offset, SEEK_SET);
     read(in_fd, imagen_original, img_size); // guardamos la imagen en imagen_original
-	volatile unsigned char image [img_size];
+	//volatile unsigned char image [img_size];
     int out_fd = open(GRAYSCALE_FILE, O_WRONLY | O_CREAT | O_TRUNC, 0644);
     if (out_fd < 0)
     {

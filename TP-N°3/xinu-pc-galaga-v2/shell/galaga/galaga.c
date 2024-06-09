@@ -6,8 +6,6 @@
 #include "gameover.h"
 #include "shoot.h"
 
-
-
 extern unsigned char tecla_actual;
 typedef unsigned short u16;
 #define RGB(r, g, b) (r | (g << 5) | (b << 10))
@@ -161,8 +159,6 @@ int galaga(void) {
 			player.playerY += playerspeed;
 		}
     
-	
-
 		waitForVBlank();
 		sleepms(50);
 		//draw player
