@@ -8,3 +8,12 @@
 
 extern unsigned char kblayout [128];  // { ... } Fill your layout yourself 
 
+//variable globales
+sid32 semaforo = 0;
+
+#define BUFFER_SIZE 10 // Tamaño del buffer
+
+unsigned char buffer[BUFFER_SIZE];
+int cabeza = 0;
+int cola = 0;
+int pos = 0;

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "xinu.h": "c",
+        "keyboard.h": "c"
+    }
+}

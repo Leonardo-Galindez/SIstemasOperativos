@@ -25,3 +25,5 @@ d. ¿Considera que este programa podría ser portado fácilmente a MAC OS? ¿O a
 porqué. Justifique su respuesta.
 
 si porque estos sistemas tienen el estadar posix
+
+cada processo es un hilo
