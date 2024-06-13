@@ -111,10 +111,15 @@ int main()
     // Asignar memoria para la imagen original y la nueva imagen
     int img_size = (width * 3 + padding) * height;
     imagen_original = (unsigned char *)malloc(img_size); // asignamos memoria dinamica
-    //imagen_original[img_size];
+    // imagen_original[img_size];
+    /*
+    SEEK_SET: El desplazamiento se cuenta desde el inicio del archivo.
+    SEEK_CUR: El desplazamiento se cuenta desde la posición actual del puntero.
+    SEEK_END: El desplazamiento se cuenta desde el final del archivo
+    */
     lseek(in_fd, h.offset, SEEK_SET);
     read(in_fd, imagen_original, img_size); // guardamos la imagen en imagen_original
-	//volatile unsigned char image [img_size];
+                                            // volatile unsigned char image [img_size];
     int out_fd = open(GRAYSCALE_FILE, O_WRONLY | O_CREAT | O_TRUNC, 0644);
     if (out_fd < 0)
     {
@@ -149,7 +154,6 @@ int main()
 
     // Liberar memoria
     free(imagen_original); // liberamos la memoria dinamica
-
 
     printf("Imagen en escala de grises generada: %s\n", GRAYSCALE_FILE);
     return 0;

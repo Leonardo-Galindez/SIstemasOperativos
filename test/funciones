@@ -1,0 +1,9 @@
+a: No hay deadlock porque negamos una de las condiciones para que ocurra deadlock que es que halla exclusion mutua y que un proceso al tomar un recurso no necesito tomar otro .
+b: resume();
+c:0
+d:
+syscalls
+create,kill,getpid,getprio,setprio,chprio,gettime,sleep,wakeup,send,receive,signal,
+wait,open,close,read,write,control,getc,putc
+biblioteca de c
+strlen,printf,scanf,getchar,putchar,excvp

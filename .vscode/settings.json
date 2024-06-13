@@ -5,6 +5,8 @@
         "cstdio": "cpp",
         "array": "c",
         "string": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "xinu.h": "c",
+        "keyboard.h": "c"
     }
 }
