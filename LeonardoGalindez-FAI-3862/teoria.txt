@@ -1,0 +1,28 @@
+a. Defienda o critique la siguiente frase (justificar su postura): Una rutina de atención de
+interrupciones puede bloquear, por ejemplo, al tener que accionar algún hardware y esperando a
+que responda.
+
+* no ya que en esta parte las rutinas no estan disponibles, asi que si por ejemplo utililzamos un semaforo con un wait el programa se cuelga.
+
+b. ¿Considera que el programa convertir_a_gris.c original visto en la práctica, podría ser portado sin
+mucho esfuerzo a MAC OS? ¿O a FreeBSD?. Si/no, porqué. Justifique su respuesta.
+
+*Si podria ya que estos sistemas tienen el estadar posix.
+
+c. Defienda o critique la frase. Justificar: En XINU los procesos no pueden utilizar el mecanismo de
+comunicación inter procesos “memoria compartida”, porque el sistema operativo no provee tal
+funcionalidad.
+
+*no ya que no posee el estandar posix
+
+d. Defienda o critique la siguiente declaración: En un driver de dispositivo de E/S utilizar un buffer
+(como el implementado en la práctica) no tiene mucho sentido en realidad, ya que un proceso
+puede inmediatamente consumir una entrada (o generar una salida) cuando el driver obtiene un
+dato un de entrada via una interrupción (o emitió un dato de salida).
+
+
+
+e. Con lo aprendido durante el cursado, ¿considera que los desarrolladores de Android (*) habrán
+tenido en cuenta POSIX?. ¿Por qué lo harían?. Justifique su respuesta.
+(*) (Google, quien posiblemente su principal misión es generar ingresos, y podrían o no querer ser
+compatibles con otros sistemas).

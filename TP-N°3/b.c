@@ -14,14 +14,14 @@ int main()
     int i;
 
     /* abrimos la memoria el segmento de memoria compartida con modo lectura*/
-    shm_fd = shm_open(name, O_RDONLY, 0666);
+    shm_fd = shm_open(name, O_RDWR, 0666);
     if (shm_fd == -1)
     {
         printf("shared memory failed\n");
         exit(-1);
     }
 
-   // Asignamos el segmento de memoria compartida en el espacio de direcciones del proceso
+    // Asignamos el segmento de memoria compartida en el espacio de direcciones del proceso
     ptr = mmap(0, SIZE, PROT_READ, MAP_SHARED, shm_fd, 0);
     if (ptr == MAP_FAILED)
     {
@@ -31,13 +31,18 @@ int main()
 
     /* now read from the shared memory region */
     printf("Contenido de la memoria compartida:\n%s\n", (char *)ptr);
-    //limpiar
-    /* remove the shared memory segment */
-    if (shm_unlink(name) == -1)
+    size_t current_length = strlen(ptr);
+    char texto[] = " Mundo";
+    if (lseek(shm_fd, current_length, SEEK_SET) == -1)
     {
-        printf("Error removing %s\n", name);
-        exit(-1);
+        perror("Error al mover el cursor del archivo");
+        munmap(ptr, SIZE);
+        close(shm_fd);
+        exit(EXIT_FAILURE);
     }
-    return 0;
-}
+    write(shm_fd, texto, sizeof(texto));
+    printf("Contenido de la memoria compartida:\n%s\n", (char *)ptr);
+    // limpiar
+    /* remove the shared memory segment */
    
+}

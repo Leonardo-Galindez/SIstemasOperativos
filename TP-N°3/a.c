@@ -47,10 +47,15 @@ int main()
 
     read(file_fd, ptr, SIZE);
 
+
     close(file_fd);
     close(shm_fd);
 
-    // flags: Modos de apertura (como O_RDONLY, O_WRONLY, O_RDWR, O_CREAT, O_TRUNC, etc.).
+  
+    return 0;
+}
+
+  // flags: Modos de apertura (como O_RDONLY, O_WRONLY, O_RDWR, O_CREAT, O_TRUNC, etc.).
     //  consultar sobre el fopen esta bien diferencia entre los 2
     /*FILE *file = fopen(file_dr, "r+");
     if (file == NULL)
@@ -81,5 +86,3 @@ int main()
     /*sprintf(ptr, "%s", mess0);
     ptr += strlen(mess0);
     sprintf(ptr, "%s", mess1);*/
-    return 0;
-}

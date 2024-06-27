@@ -1,0 +1,39 @@
+Claro, puedo ayudarte con eso!
+
+Procesos vs Hilos en Linux
+En Linux, tanto los procesos como los hilos son unidades de ejecución importantes, pero tienen diferencias fundamentales:
+
+Proceso:
+
+Un proceso es una instancia de un programa en ejecución.
+Cada proceso tiene su propio espacio de memoria privado, que incluye variables, estructuras de datos, pila de ejecución y código.
+Los procesos se comunican entre sí utilizando mecanismos como pipes, sockets o memoria compartida.
+Se crean con la llamada al sistema fork() y pueden ser gestionados por el kernel de forma independiente.
+Hilo (Thread):
+
+Un hilo es una secuencia de ejecución dentro de un proceso.
+Comparten el mismo espacio de memoria y recursos con otros hilos del mismo proceso, incluyendo variables globales y estructuras de datos.
+Los hilos son ligeros en comparación con los procesos y permiten una comunicación más rápida entre ellos, pero también pueden introducir problemas de concurrencia.
+Se crean con la llamada al sistema pthread_create().
+Funciones POSIX en C para Acceso a Archivos
+En C, el acceso a archivos se gestiona principalmente a través de las funciones POSIX, que son estándares en sistemas Unix y Linux. Aquí están las principales funciones que se utilizan:
+
+open()
+
+Abre un archivo y devuelve un descriptor de archivo (file descriptor).
+Sintaxis: int open(const char *pathname, int flags);
+read()
+
+Lee datos desde un descriptor de archivo abierto.
+Sintaxis: ssize_t read(int fd, void *buf, size_t count);
+write()
+
+Escribe datos en un descriptor de archivo abierto.
+Sintaxis: ssize_t write(int fd, const void *buf, size_t count);
+close()
+
+Cierra un descriptor de archivo previamente abierto.
+Sintaxis: int close(int fd);
+Estas funciones permiten operar de manera eficiente con archivos en el sistema operativo, gestionando la lectura, escritura y cierre de archivos de forma adecuada.
+
+¿Te gustaría profundizar en algún aspecto específico de estos temas o tienes alguna pregunta más?

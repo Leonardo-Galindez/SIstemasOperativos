@@ -1,0 +1,5 @@
+El comando time imprimirá tres resultados principales:
+
+real: Tiempo total transcurrido desde el inicio hasta el final del comando.
+user: Tiempo de CPU utilizado en el espacio de usuario.
+sys: Tiempo de CPU utilizado en el sistema (kernel).
